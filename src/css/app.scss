@@ -1,0 +1,44 @@
+// app global css in SCSS form
+$selector: rgb(15, 28, 209);
+
+.desktop {
+    background-color: rgb(0, 0, 0);
+}
+.q-drawer {
+    background-color: transparent;
+}
+.item {
+    margin-top: 10px;
+    height: 70px;
+    text-align: center;
+}
+.drawer {
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(173, 173, 173);
+    backdrop-filter: blur(50px);
+    background-color: rgba(0, 0, 0, 0.226);
+}
+span {
+    text-align: center;
+    width: 10px;
+    height: 80px;
+    background: rgb(15, 28, 209);
+    background: linear-gradient(270deg, rgb(15, 28, 209) 0%, #121e29 80%);
+    background: -webkit-linear-gradient(270deg, rgb(15, 28, 209) 0%, #121e29 80%);
+    background: -moz-linear-gradient(270deg, rgb(15, 28, 209) 0%, #121e29 80%);
+    visibility: hidden;
+}
+.item:hover {
+    margin-left: 15px;
+    color: aqua;
+    transition: ease-in-out 0.3s;
+    animation-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    span {
+        transition: transform 0.15s;
+        visibility: visible;
+        border-radius: 0px 200px 200px 0px;
+        box-shadow: 0 0 20px 10px $selector, /* inner white */ 0 0 8px 2px rgb(8, 12, 70),
+            /* middle magenta */ 0 0 10px 10px rgb(2, 3, 20); /* outer cyan */
+    }
+}
