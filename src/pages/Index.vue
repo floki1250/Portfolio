@@ -1,17 +1,28 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
-  </q-page>
+  <q-page class="flex flex-center"> </q-page>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { api } from "boot/axios";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'PageIndex'
-})
+  name: "PageIndex",
+  data() {
+    return {
+      data: null,
+    };
+  },
+  mounted() {
+    api
+      .get("")
+      .then((response) => {
+        this.data = response.data;
+        console.log(response.data);
+      })
+      .catch((e) => {
+        console.error(e);
+      });
+  },
+});
 </script>

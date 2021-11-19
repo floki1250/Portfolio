@@ -1,68 +1,71 @@
 <template>
-  <Background />
   <main>
-    <q-layout view="hHh lpR fFf">
-      <q-drawer v-model="leftDrawerOpen" side="left" overlay behavior="desktop">
-        <div class="drawer">
-          <q-list class="text-white">
-            <div class="item row">
-              <span></span>
-              <div class="row">
-                <q-icon name="print" />
-                <p style="">Home</p>
-              </div>
+    <q-layout view="hHh lpR fFf" @mousemove="">
+      <q-drawer
+        v-model="leftDrawerOpen"
+        side="left"
+        overlay
+        behavior="desktop"
+        :width="250"
+      >
+        <q-list class="text-white">
+          <div class="item row">
+            <div class="row">
+              <q-icon name="print" />
+              <p style="">Home</p>
             </div>
-            <div class="item row">
-              <span></span>
-              <p>Home</p>
-            </div>
-            <div class="item row">
-              <span></span>
-              <p>Home</p>
-            </div>
-            <div class="item row">
-              <span></span>
-              <p>Home</p>
-            </div>
-            <div class="item row">
-              <span></span>
-              <p>Home</p>
-            </div>
-          </q-list>
-        </div>
+          </div>
+          <div class="item row">
+            <div></div>
+            <p>Home</p>
+          </div>
+          <div class="item row">
+            <div></div>
+            <p>Home</p>
+          </div>
+          <div class="item row">
+            <div></div>
+            <p>Home</p>
+          </div>
+          <div class="item row">
+            <div></div>
+            <p>Home</p>
+          </div>
+        </q-list>
       </q-drawer>
-
+      <q-drawer
+        show-if-above
+        v-model="rightDrawerOpen"
+        side="right"
+        :width="300"
+      >
+        <Project />
+      </q-drawer>
       <q-page-container>
-        <router-view />
+        <q-page padding>
+          <router-view />
+        </q-page>
       </q-page-container>
-
-      <q-footer reveal elevated v-model="footer" class="bg-grey-8 text-white">
-        <q-toolbar>
-          <q-toolbar-title>
-            <q-avatar>
-              <img
-                src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg"
-              />
-            </q-avatar>
-            <div>Title</div>
-          </q-toolbar-title>
-        </q-toolbar>
-      </q-footer>
     </q-layout>
   </main>
 </template>
 
 <script>
 import { ref } from "vue";
-import Background from "src/components/Background.vue";
+import Project from "src/components/Project.vue";
 
 export default {
-  components: { Background },
+  components: { Project },
+  data() {
+    return {};
+  },
   setup() {
     const leftDrawerOpen = ref(true);
+    const rightDrawerOpen = ref(true);
     const footer = ref(false);
 
     return {
+      rightDrawerOpen,
       leftDrawerOpen,
       footer,
       toggleLeftDrawer() {

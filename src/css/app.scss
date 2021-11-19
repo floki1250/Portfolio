@@ -1,16 +1,28 @@
 // app global css in SCSS form
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Philosopher&family=Syncopate&display=swap");
 $selector: rgb(15, 28, 209);
-
-.desktop {
-    background-color: rgb(0, 0, 0);
+body {
+    background-image: url("../assets/6889524.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .q-drawer {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.397);
+    // background-color: rgba(255, 255, 255, 0.397);
 }
 .item {
-    margin-top: 10px;
+    color: rgb(61, 61, 61);
+    margin: 10px;
     height: 70px;
     text-align: center;
+    font-family: "Philosopher", sans-serif;
+    font-size: larger;
+    font-weight: 500;
+    background-color: rgba(245, 245, 245, 0.75);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .drawer {
     margin-left: 10px;
@@ -19,26 +31,23 @@ $selector: rgb(15, 28, 209);
     backdrop-filter: blur(50px);
     background-color: rgba(0, 0, 0, 0.226);
 }
-span {
-    text-align: center;
-    width: 10px;
-    height: 80px;
-    background: rgb(15, 28, 209);
-    background: linear-gradient(270deg, rgb(15, 28, 209) 0%, #121e29 80%);
-    background: -webkit-linear-gradient(270deg, rgb(15, 28, 209) 0%, #121e29 80%);
-    background: -moz-linear-gradient(270deg, rgb(15, 28, 209) 0%, #121e29 80%);
-    visibility: hidden;
-}
+
 .item:hover {
-    margin-left: 15px;
-    color: aqua;
-    transition: ease-in-out 0.3s;
+    font-weight: 700;
+    color: rgb(29, 29, 29);
+    transition: ease-in-out 0.5s;
     animation-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-    span {
-        transition: transform 0.15s;
-        visibility: visible;
-        border-radius: 0px 200px 200px 0px;
-        box-shadow: 0 0 20px 10px $selector, /* inner white */ 0 0 8px 2px rgb(8, 12, 70),
-            /* middle magenta */ 0 0 10px 10px rgb(2, 3, 20); /* outer cyan */
-    }
+    box-shadow: 0px 0px 10px -10px rgb(245, 245, 245);
+    transition: 0.3s ease-in-out;
+    transform: scale(1.025);
+}
+
+.nav-parent {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100%;
 }
