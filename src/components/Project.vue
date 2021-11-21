@@ -14,6 +14,7 @@
             "
           >
             <div>{{ i.name }}</div>
+            <q-separator  inset   />
             <div>{{ i.description }}</div>
           </div>
         </div>

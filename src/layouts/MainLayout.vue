@@ -1,24 +1,28 @@
 <template>
   <main>
-    <q-layout view="hHh lpR fFf" @mousemove="">
-      <q-drawer
-        v-model="leftDrawerOpen"
-        side="left"
-        overlay
-        behavior="desktop"
-        :width="250"
-      >
+    <q-layout view="hHh lpR fFf">
+      <q-drawer v-model="leftDrawerOpen" side="left" :width="250">
+        <div>
+          <q-avatar size="140px" style="margin: 30% 0% 15% 25%">
+            <img src="../assets/brand.svg" alt="" />
+          </q-avatar>
+        </div>
         <q-list class="text-white">
-          <div class="item row">
-            <div class="row">
-              <q-icon name="print" />
-              <p style="">Home</p>
-            </div>
-          </div>
-          <div class="item row">
-            <div></div>
-            <p>Home</p>
-          </div>
+            <q-item to="/home" class="item">
+              <q-item-section avatar>
+                <q-avatar ><q-icon color="#000D6B" text-color="white"  name="eva-home" style="color:#0013a3" /></q-avatar>
+                Home
+              </q-item-section>
+              <q-item-section style="padding-left: 20px;"></q-item-section>
+            </q-item>
+          
+          <q-item to="/About" class="item">
+              <q-item-section avatar>
+                <q-avatar ><q-icon color="#FF5DA2" name="eva-alert-circle" style="color:#00c795" /></q-avatar>
+                About Me
+              </q-item-section>
+              <q-item-section style="padding-left: 20px;"></q-item-section>
+            </q-item>
           <div class="item row">
             <div></div>
             <p>Home</p>
@@ -33,16 +37,11 @@
           </div>
         </q-list>
       </q-drawer>
-      <q-drawer
-        show-if-above
-        v-model="rightDrawerOpen"
-        side="right"
-        :width="300"
-      >
+      <q-drawer v-model="rightDrawerOpen" side="right" :width="300">
         <Project />
       </q-drawer>
       <q-page-container>
-        <q-page padding>
+        <q-page>
           <router-view />
         </q-page>
       </q-page-container>

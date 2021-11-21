@@ -1,6 +1,8 @@
 // app global css in SCSS form
-@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Philosopher&family=Syncopate&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 $selector: rgb(15, 28, 209);
+*{font-family: 'Quicksand', sans-serif;}
 body {
     background-image: url("../assets/6889524.jpg");
     background-position: center;
@@ -8,21 +10,33 @@ body {
     background-repeat: no-repeat;
 }
 .q-drawer {
-    background-color: rgba(255, 255, 255, 0.397);
+    background-color: rgba(255, 255, 255, 0.1);
     // background-color: rgba(255, 255, 255, 0.397);
+}
+.name{
+    
+    color: whitesmoke;
+    font-size: 92px;
+    font-weight: 700;
+}
+.func{
+    
+    color: whitesmoke;
+    font-size: 62px;
+    font-weight: 100;
 }
 .item {
     color: rgb(61, 61, 61);
     margin: 10px;
     height: 70px;
     text-align: center;
-    font-family: "Philosopher", sans-serif;
     font-size: larger;
     font-weight: 500;
     background-color: rgba(245, 245, 245, 0.75);
     border-radius: 5px;
     backdrop-filter: blur(10px);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
 }
 .drawer {
     margin-left: 10px;
@@ -50,4 +64,33 @@ body {
     height: 10px;
     background-color: rgb(0, 0, 0);
     border-radius: 100%;
+}
+.resume{
+    position: relative;
+    top: 0% ;
+    left: 0%;
+    width: 100fr;
+    height: 100fr;
+    background: rgb(17, 16, 16);
+}
+.box{
+    color: rgb(61, 61, 61);
+    background-color: transparent ;
+    margin: 0px 5px 0px 5px;
+    padding: 50px;
+    width: 100% !important;
+    box-shadow: 0px 0px 10px -10px rgb(245, 245, 245);
+}
+.text-box{
+    position: absolute;
+    bottom: 0%;
+}
+.mini-box{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: fit-content;
+    border-radius: 10px;
+    margin: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
