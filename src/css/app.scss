@@ -1,8 +1,12 @@
 // app global css in SCSS form
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 $selector: rgb(15, 28, 209);
-*{font-family: 'Quicksand', sans-serif;}
+* {
+    font-family: "Quicksand", sans-serif;
+    overflow: hidden;
+    scrollbar-width: none;
+}
 body {
     background-image: url("../assets/6889524.jpg");
     background-position: center;
@@ -13,16 +17,14 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     // background-color: rgba(255, 255, 255, 0.397);
 }
-.name{
-    
+.name {
     color: whitesmoke;
-    font-size: 92px;
+    font-size: 72px;
     font-weight: 700;
 }
-.func{
-    
+.func {
     color: whitesmoke;
-    font-size: 62px;
+    font-size: 54px;
     font-weight: 100;
 }
 .item {
@@ -47,12 +49,13 @@ body {
 }
 
 .item:hover {
+    font-style: normal;
     font-weight: 700;
     color: rgb(29, 29, 29);
-    transition: ease-in-out 0.5s;
-    animation-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-    box-shadow: 0px 0px 10px -10px rgb(245, 245, 245);
-    transition: 0.3s ease-in-out;
+    transition: ease-in-out 0.1s;
+    //animation-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    //box-shadow: 0px 0px 10px -10px rgb(245, 245, 245);
+
     transform: scale(1.025);
 }
 
@@ -65,27 +68,27 @@ body {
     background-color: rgb(0, 0, 0);
     border-radius: 100%;
 }
-.resume{
+.resume {
     position: relative;
-    top: 0% ;
+    top: 0%;
     left: 0%;
     width: 100fr;
     height: 100fr;
     background: rgb(17, 16, 16);
 }
-.box{
+.box {
     color: rgb(61, 61, 61);
-    background-color: transparent ;
+    background-color: transparent;
     margin: 0px 5px 0px 5px;
     padding: 50px;
     width: 100% !important;
     box-shadow: 0px 0px 10px -10px rgb(245, 245, 245);
 }
-.text-box{
+.text-box {
     position: absolute;
     bottom: 0%;
 }
-.mini-box{
+.mini-box {
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.7);
     height: fit-content;
@@ -93,4 +96,11 @@ body {
     margin: 10px;
     backdrop-filter: blur(10px);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.title {
+    color: rgba(245, 245, 245, 0.904);
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
 }

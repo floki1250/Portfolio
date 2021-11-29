@@ -1,6 +1,16 @@
 <template>
   <q-page class="flex">
-    <p class="title">Project</p>
+    <div class="title">
+      <q-separator
+        style="
+          background: rgba(245, 245, 245, 0.5);
+          width: 300px;
+          margin-top: 10px;
+        "
+      />
+      <p>Github Projects</p>
+      <q-separator style="background: rgba(245, 245, 245, 0.5); width: 300px" />
+    </div>
     <q-scroll-area style="width: 400px; height: 500px">
       <q-list class="text-white">
         <div v-for="i in this.data" :key="i">
@@ -14,7 +24,7 @@
             "
           >
             <div>{{ i.name }}</div>
-            <q-separator  inset   />
+            <q-separator inset />
             <div>{{ i.description }}</div>
           </div>
         </div>
