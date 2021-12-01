@@ -23,9 +23,19 @@
               }
             "
           >
-            <div>{{ i.name }}</div>
+            <div
+              style="
+                background-color: #e2e5de8f;
+                width: 100%;
+                border-radius: 5px;
+              "
+            >
+              {{ i.name }}
+            </div>
             <q-separator inset />
-            <div>{{ i.description }}</div>
+            <div style="width: 100%; border-radius: 5px">
+              {{ i.description }}
+            </div>
           </div>
         </div>
       </q-list>
