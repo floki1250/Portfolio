@@ -130,7 +130,12 @@
       </q-drawer>
       <q-page-container>
         <q-page>
-          <router-view />
+          <transition
+            enter-active-class="animated fadeInDown slow"
+            leave-active-class="animated fadeOutUp slow"
+          >
+            <router-view />
+          </transition>
         </q-page>
       </q-page-container>
     </q-layout>
@@ -139,6 +144,7 @@
 
 <script>
 import { ref } from "vue";
+import "animate.css";
 import Project from "src/components/Project.vue";
 
 export default {
