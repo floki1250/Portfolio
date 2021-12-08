@@ -1,31 +1,31 @@
 <template>
   <div style="margin: 50px">
     <q-input
-      standout="bg-blue-10 text-white"
+      standout="bg-white"
       v-model="name"
       label="Name"
-      bg-color="white"
       style="margin: 15px"
+      dark
     />
     <q-input
-      standout="bg-blue-10 text-white"
+      standout="bg-white"
       v-model="subject"
       label="Subject"
-      bg-color="white"
       style="margin: 15px"
+      dark
     />
     <q-input
-      standout="bg-blue-10 text-white"
+      standout="bg-white"
       v-model="message"
       label="Messsage"
-      bg-color="white"
       style="margin: 15px; max-height: 200px"
       type="textarea"
+      dark
     />
     <a :href="mail">
       <q-btn
-        color="blue-10"
-        icon="eva-paper-plane"
+        color="transparent"
+        icon="eva-email"
         label="Send"
         style="margin: 15px; width: 150px"
         @click="generate"

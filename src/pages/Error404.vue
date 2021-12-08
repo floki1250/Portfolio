@@ -1,13 +1,12 @@
 <template>
-  <div class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center">
+  <div
+    class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center"
+  >
+    <BackgroundAnim />
     <div>
-      <div style="font-size: 30vh">
-        404
-      </div>
+      <div style="font-size: 30vh">404</div>
 
-      <div class="text-h2" style="opacity:.4">
-        Oops. Nothing here...
-      </div>
+      <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
 
       <q-btn
         class="q-mt-xl"
@@ -23,9 +22,10 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-
+import { defineComponent } from "vue";
+import BackgroundAnim from "src/components/BackgroundAnimation.vue";
 export default defineComponent({
-  name: 'Error404'
-})
+  name: "Error404",
+  components: { BackgroundAnim },
+});
 </script>

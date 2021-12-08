@@ -1,5 +1,6 @@
 <template>
   <main>
+    <BackgroundAnim />
     <q-layout view="hHh lpR fFf">
       <q-drawer v-model="leftDrawerOpen" side="left" :width="250">
         <div>
@@ -45,12 +46,23 @@
               >Contact Me</q-item-section
             >
           </q-item>
-
+          <q-item class="item" @click="$q.dark.toggle()">
+            <q-item-section top avatar>
+              <q-btn
+                :color="$q.dark.isActive ? 'yellow' : 'black'"
+                :icon="$q.dark.isActive ? 'eva-sun' : 'eva-moon'"
+                @click="$q.dark.toggle()"
+                round
+                flat
+              />
+            </q-item-section>
+            <q-item-section style="margin-left: -35%">Dark Mode</q-item-section>
+          </q-item>
           <q-separator
             style="
               background: rgba(245, 245, 245, 0.5);
               width: 90%;
-              margin: 50px 10px 10px 10px;
+              margin: 10px;
             "
           />
           <q-item class="item" style="padding: 0px">
@@ -146,9 +158,10 @@
 import { ref } from "vue";
 import "animate.css";
 import Project from "src/components/Project.vue";
-
+import BackgroundAnim from "src/components/BackgroundAnimation.vue";
+import { useQuasar } from "quasar";
 export default {
-  components: { Project },
+  components: { Project, BackgroundAnim },
   data() {
     return {};
   },
@@ -158,6 +171,7 @@ export default {
     },
   },
   setup() {
+    const $q = useQuasar();
     const leftDrawerOpen = ref(true);
     const rightDrawerOpen = ref(true);
     const footer = ref(false);
