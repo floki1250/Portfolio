@@ -1,11 +1,13 @@
 <template>
   <q-page class="flex">
     <div class="box">
-      <div>
+      <div class="flex flex-left" > 
         <p class="name">Hello , I'm Adem</p>
         <p class="func">Web Developer</p>
       </div>
     </div>
+   
+        
   </q-page>
 </template>
 
