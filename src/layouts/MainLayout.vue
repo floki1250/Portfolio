@@ -46,18 +46,7 @@
               >Contact Me</q-item-section
             >
           </q-item>
-          <q-item class="item" @click="$q.dark.toggle()">
-            <q-item-section top avatar>
-              <q-btn
-                :color="$q.dark.isActive ? 'yellow' : 'black'"
-                :icon="$q.dark.isActive ? 'eva-sun' : 'eva-moon'"
-                @click="$q.dark.toggle()"
-                round
-                flat
-              />
-            </q-item-section>
-            <q-item-section style="margin-left: -35%">Dark Mode</q-item-section>
-          </q-item>
+
           <q-separator
             style="
               background: rgba(245, 245, 245, 0.5);
@@ -136,6 +125,15 @@
             "
           />
         </q-list>
+        <div style="position: absolute; bottom: 2%">
+          <q-btn
+            :color="$q.dark.isActive ? 'yellow' : 'black'"
+            :icon="$q.dark.isActive ? 'eva-sun' : 'eva-moon'"
+            @click="$q.dark.toggle()"
+            round
+            flat
+          />
+        </div>
       </q-drawer>
       <q-drawer v-model="rightDrawerOpen" side="right" :width="300">
         <Project />

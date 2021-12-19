@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page style="overflow: auto !important">
     <div class="mini-box">
       <p style="font-size: 30px; font-weight: 500">General Info</p>
       <p>
@@ -22,19 +22,46 @@
       </p>
     </div>
     <div class="mini-box">
-       <p style="font-size: 30px; font-weight: 500">Front End Development</p>
-      <div >
-      Vue JS
-     <q-linear-progress stripe rounded size="10px" :value="0.5" color="indigo-6" style="margin:10px 10px 10px 0px"/>
-     JD Edwards
-      <q-linear-progress stripe rounded size="10px" :value="0.5" color="orange-6" style="margin:10px 10px 10px 0px"/>
-      Javascript
-    <q-linear-progress stripe rounded size="10px" :value="0.5" color="red" style="margin:10px 10px 10px 0px"/>
-     Design
-    <q-linear-progress stripe rounded size="10px" :value="0.5" color="teal-6" style="margin:10px 10px 10px 0px"/>
+      <p style="font-size: 30px; font-weight: 500">Front End Development</p>
+      <div>
+        Vue JS
+        <q-linear-progress
+          stripe
+          rounded
+          size="10px"
+          :value="0.5"
+          color="indigo-6"
+          style="margin: 10px 10px 10px 0px"
+        />
+        JD Edwards
+        <q-linear-progress
+          stripe
+          rounded
+          size="10px"
+          :value="0.5"
+          color="orange-6"
+          style="margin: 10px 10px 10px 0px"
+        />
+        Javascript
+        <q-linear-progress
+          stripe
+          rounded
+          size="10px"
+          :value="0.5"
+          color="red"
+          style="margin: 10px 10px 10px 0px"
+        />
+        Design
+        <q-linear-progress
+          stripe
+          rounded
+          size="10px"
+          :value="0.5"
+          color="teal-6"
+          style="margin: 10px 10px 10px 0px"
+        />
       </div>
-     <q-btn color="primary" icon="check" label="My CV" @click="onClick" class="full-width" push/>
+      <q-btn icon="check" label="My CV" class="full-width" push />
     </div>
-   
   </q-page>
 </template>
