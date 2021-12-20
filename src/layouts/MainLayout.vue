@@ -103,11 +103,7 @@
                 <q-btn
                   color="indigo-9"
                   icon="eva-facebook"
-                  @click="
-                    opentab(
-                      'https://drive.google.com/file/d/1B7f8DyVqcVuepq0jaNhclzLonry7tp5c/view'
-                    )
-                  "
+                  @click="opentab('https://www.facebook.com/adam1250/')"
                   flat
                   round
                   ><q-tooltip class="bg-indigo-9" :offset="[5, 5]">
@@ -125,15 +121,16 @@
             "
           />
         </q-list>
-        <div style="position: absolute; bottom: 2%">
+        <q-item style="position: absolute; bottom: 2%" class="item">
           <q-btn
             :color="$q.dark.isActive ? 'yellow' : 'black'"
             :icon="$q.dark.isActive ? 'eva-sun' : 'eva-moon'"
             @click="$q.dark.toggle()"
             round
             flat
+            size="12px"
           />
-        </div>
+        </q-item>
       </q-drawer>
       <q-drawer v-model="rightDrawerOpen" side="right" :width="300">
         <Project />
