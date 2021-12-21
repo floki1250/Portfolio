@@ -3,10 +3,19 @@
     <BackgroundAnim />
     <q-layout view="hHh lpR fFf">
       <q-drawer v-model="leftDrawerOpen" side="left" :width="250">
-        <div>
-          <q-avatar size="140px" style="margin: 10% 0% 15% 25%">
-            <img src="../assets/brand.svg" alt="" />
-          </q-avatar>
+        <div
+          class="item flex flex-center"
+          style="
+            border-radius: 100%;
+            width: fit-content;
+            height: fit-content;
+            margin: 10% 0% 10% 16%;
+          "
+        >
+          <q-btn round flat>
+            <q-avatar size="140px">
+              <img src="../assets/Logo.svg" alt="" /> </q-avatar
+          ></q-btn>
         </div>
         <q-list class="text-white">
           <q-item to="/home" class="item">

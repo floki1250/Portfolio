@@ -1,10 +1,24 @@
 // app global css in SCSS form
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-
+@font-face {
+    font-family: buble;
+    src: url("../assets/ReglisseFill-WyWzn.otf");
+}
 * {
     font-family: "Quicksand", sans-serif;
     overflow: hidden;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 .body--light {
     background-position: center;
@@ -13,6 +27,9 @@
     background: #feac5e;
     background: -webkit-linear-gradient(to right, #4bc0c8, #c779d0, #feac5e);
     background: linear-gradient(to right, #4bc0c8, #c779d0, #feac5e);
+    background-size: 150%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
 
     .q-drawer {
         background-color: rgba(255, 255, 255, 0.1);
@@ -21,12 +38,22 @@
     .name {
         color: whitesmoke;
         font-size: 72px;
-        font-weight: 700;
+        font-weight: 100;
+        font-family: buble;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+            0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+            0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+            0 2px 2px rgba(0, 0, 0, 0.15);
     }
     .func {
         color: whitesmoke;
         font-size: 54px;
         font-weight: 100;
+        font-family: buble;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+            0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+            0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+            0 2px 2px rgba(0, 0, 0, 0.15);
     }
     .item {
         color: rgb(61, 61, 61);
@@ -35,12 +62,14 @@
         text-align: center;
         font-size: larger;
         font-weight: 500;
-        background-color: rgba(245, 245, 245, 0.75);
-        border-radius: 5px;
+        background-color: rgb(245, 245, 245);
+        border-radius: 10px;
         backdrop-filter: blur(10px);
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         padding: 10px;
         //background-color: #e2e5de8f;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     }
     .drawer {
         margin-left: 10px;
@@ -57,8 +86,10 @@
         transition: ease-in-out 0.1s;
         //animation-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
         //box-shadow: 0px 0px 10px -10px rgb(245, 245, 245);
-
-        transform: scale(1.025);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        /*  transform: scale(1.025); */
+        border-radius: 20px;
     }
 
     .nav-parent {
@@ -92,12 +123,14 @@
     }
     .mini-box {
         padding: 10px;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgb(255, 255, 255);
         height: fit-content;
         border-radius: 10px;
         margin: 10px;
         backdrop-filter: blur(10px);
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     }
     .title {
         color: rgba(245, 245, 245, 0.904);
@@ -113,19 +146,30 @@
     background-repeat: no-repeat;
     background-color: #7f5a83 !important ;
     background-image: linear-gradient(315deg, #7f5a83 0%, #051622 74%) !important ;
+
     .q-drawer {
         background-color: rgba(0, 0, 0, 0.1);
         // background-color: rgba(255, 255, 255, 0.397);
     }
     .name {
-        color: whitesmoke;
+        color: white;
         font-size: 72px;
-        font-weight: 700;
+        font-weight: 100;
+        font-family: buble;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+            0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+            0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+            0 20px 20px rgba(0, 0, 0, 0.15);
     }
     .func {
         color: whitesmoke;
         font-size: 54px;
-        font-weight: 100;
+        font-weight: 200;
+        font-family: buble;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+            0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+            0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+            0 2px 2px rgba(0, 0, 0, 0.15);
     }
     .item {
         color: rgb(212, 212, 212);
@@ -135,9 +179,10 @@
         font-size: larger;
         font-weight: 500;
         background-color: #0f2230;
-        border-radius: 5px;
+        border-radius: 10px;
         backdrop-filter: blur(10px);
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
         padding: 10px;
         //background-color: #e2e5de8f;
     }
@@ -155,9 +200,9 @@
         color: rgb(212, 212, 212);
         transition: ease-in-out 0.1s;
         //animation-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-        //box-shadow: 0px 0px 10px -10px rgb(245, 245, 245);
-
-        transform: scale(1.025);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 20px;
     }
 
     .nav-parent {

@@ -1,30 +1,37 @@
 <template>
-  <div style="margin: 50px">
+  <div class="item" style="margin: 50px">
     <q-input
-      standout="bg-white"
+      rounded
+      borderless
+      label-color="orange"
+      color="blue-10"
       v-model="name"
       label="Name"
       style="margin: 15px"
-      dark
     />
     <q-input
-      standout="bg-white"
+      rounded
+      borderless
+      label-color="orange"
+      color="blue-10"
       v-model="subject"
       label="Subject"
       style="margin: 15px"
-      dark
     />
     <q-input
-      standout="bg-white"
+      rounded
+      borderless
+      label-color="orange"
+      color="blue-10"
       v-model="message"
       label="Messsage"
       style="margin: 15px; max-height: 200px"
       type="textarea"
-      dark
     />
+
     <a :href="mail">
       <q-btn
-        color="transparent"
+        color="blue-9"
         icon="eva-email"
         label="Send"
         style="margin: 15px; width: 150px"

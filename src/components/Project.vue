@@ -8,7 +8,7 @@
           margin-top: 10px;
         "
       />
-      <p>Github Projects</p>
+      <p style="font-family: buble; font-weight: 100">Github Projects</p>
       <q-separator style="background: rgba(245, 245, 245, 0.5); width: 300px" />
     </div>
     <q-scroll-area style="width: 400px; height: 500px">
