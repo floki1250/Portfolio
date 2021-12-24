@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main v-if="$q.platform.is.desktop">
     <BackgroundAnim />
     <q-layout view="hHh lpR fFf">
       <q-drawer v-model="leftDrawerOpen" side="left" :width="250">
@@ -141,7 +141,18 @@
           />
         </q-item>
       </q-drawer>
-      <q-drawer v-model="rightDrawerOpen" side="right" :width="300">
+      <q-drawer
+        v-model="rightDrawerOpen"
+        side="right"
+        :width="300"
+        style="overflow: hidden"
+      >
+        <div class="title text-center" style="height: fit-content">
+          <p class="text-center" style="font-family: buble; font-weight: 100">
+            Github Projects
+          </p>
+        </div>
+        <q-separator dark />
         <Project />
       </q-drawer>
       <q-page-container>
@@ -156,6 +167,49 @@
       </q-page-container>
     </q-layout>
   </main>
+  <main v-if="$q.platform.is.mobile">
+    <q-layout>
+      <q-page-container>
+        <router-view />
+      </q-page-container>
+
+      <q-footer>
+        <q-list class="text-white row">
+          <q-item to="/home" class="item">
+            <q-avatar
+              ><q-icon
+                color="#F05871"
+                text-color="white"
+                name="eva-home"
+                style="color: #f05871"
+            /></q-avatar>
+          </q-item>
+
+          <q-item to="/About" class="item">
+            <q-avatar
+              ><q-icon
+                color="#FF5DA2"
+                name="eva-alert-circle"
+                style="color: #4376c5"
+            /></q-avatar>
+          </q-item>
+          <q-item class="item" to="/Contact">
+            <q-avatar
+              ><q-icon color="#FF5DA2" name="eva-email" style="color: #00c795"
+            /></q-avatar>
+          </q-item>
+          <q-item class="item" to="/projects">
+            <q-avatar
+              ><q-icon
+                color="#FF5DA2"
+                name="eva-briefcase"
+                style="color: orange"
+            /></q-avatar>
+          </q-item>
+        </q-list>
+      </q-footer>
+    </q-layout>
+  </main>
 </template>
 
 <script>
@@ -163,11 +217,13 @@ import { ref } from "vue";
 import "animate.css";
 import Project from "src/components/Project.vue";
 import BackgroundAnim from "src/components/BackgroundAnimation.vue";
-import { useQuasar } from "quasar";
+import { useQuasar, Platform } from "quasar";
 export default {
   components: { Project, BackgroundAnim },
   data() {
-    return {};
+    return {
+      Platform: true,
+    };
   },
   methods: {
     opentab(url) {

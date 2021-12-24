@@ -36,6 +36,7 @@
         label="Send"
         style="margin: 15px; width: 150px"
         @click="generate"
+        push
       ></q-btn
     ></a>
   </div>
@@ -45,7 +46,6 @@ export default {
   data() {
     return {
       name: "",
-
       subject: "",
       message: "",
       mail: "",

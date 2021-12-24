@@ -21,7 +21,7 @@ module.exports = configure(function (ctx) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/boot-files
-    boot: ["i18n", "axios"],
+    boot: ["axios"],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
     css: ["app.scss"],
@@ -138,9 +138,9 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `My Protfolio website`,
-        short_name: `My Protfolio website`,
-        description: `My portfolio website `,
+        name: `ADAM DARDOUR`,
+        short_name: `ADAM DARDOUR`,
+        description: `ADAM DARDOUR`,
         display: "standalone",
         orientation: "portrait",
         background_color: "#ffffff",

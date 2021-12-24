@@ -60,11 +60,8 @@ export default defineComponent({
       .get("")
       .then((response) => {
         this.data = response.data;
-        console.log(response.data);
       })
-      .catch((e) => {
-        console.error(e);
-      });
+      .catch((e) => {});
   },
 });
 </script>

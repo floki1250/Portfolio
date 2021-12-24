@@ -116,7 +116,7 @@ export default defineComponent({
   0% {
     transform: translateY(0) rotate(0deg);
     opacity: 1;
-    border-radius: 0;
+    border-radius: 10px;
   }
 
   100% {

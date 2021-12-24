@@ -1,17 +1,13 @@
 <template>
-  <q-page class="flex">
-    <div class="title">
-      <q-separator
-        style="
-          background: rgba(245, 245, 245, 0.5);
-          width: 300px;
-          margin-top: 10px;
-        "
-      />
-      <p style="font-family: buble; font-weight: 100">Github Projects</p>
-      <q-separator style="background: rgba(245, 245, 245, 0.5); width: 300px" />
-    </div>
-    <q-scroll-area style="width: 400px; height: 500px">
+  <q-page style="height: fit-content">
+    <q-scroll-area
+      style="
+      width: 100fr;
+       height:90vh;
+       min-height:100%
+       overflow:hidden;
+      "
+    >
       <q-list class="text-white">
         <div v-for="i in this.data" :key="i">
           <div
@@ -64,11 +60,8 @@ export default defineComponent({
       .get("")
       .then((response) => {
         this.data = response.data;
-        console.log(response.data);
       })
-      .catch((e) => {
-        console.error(e);
-      });
+      .catch((e) => {});
   },
 });
 </script>

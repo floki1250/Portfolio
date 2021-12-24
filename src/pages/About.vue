@@ -1,6 +1,6 @@
 <template>
   <q-page>
-    <q-scroll-area style="width: 100fr; height: 600px; margin: 10px">
+    <q-scroll-area :style="AboutStyle">
       <div class="mini-box">
         <p style="font-size: 30px; font-weight: 500">General Info</p>
         <p>
@@ -31,7 +31,7 @@
             stripe
             rounded
             size="10px"
-            :value="0.5"
+            :value="0.6"
             color="indigo-6"
             style="margin: 10px 10px 10px 0px"
           />
@@ -40,7 +40,7 @@
             stripe
             rounded
             size="10px"
-            :value="0.5"
+            :value="0.75"
             color="orange-6"
             style="margin: 10px 10px 10px 0px"
           />
@@ -58,7 +58,7 @@
             stripe
             rounded
             size="10px"
-            :value="0.5"
+            :value="0.4"
             color="teal-6"
             style="margin: 10px 10px 10px 0px"
           />
@@ -73,13 +73,86 @@
               'https://drive.google.com/file/d/1B7f8DyVqcVuepq0jaNhclzLonry7tp5c/view'
             )
           "
+          color="blue-9"
         />
       </div>
+      <div class="mini-box">
+        <div class="row" style="display: flex; align-items: center">
+          <q-btn
+            color="blue"
+            icon="eva-twitter"
+            @click="opentab('https://twitter.com/Adem1250_Dr')"
+            flat
+            round
+            ><q-tooltip class="bg-blue" :offset="[5, 5]">
+              Twitter
+            </q-tooltip></q-btn
+          >
+          <q-btn
+            color="indigo"
+            icon="eva-linkedin"
+            @click="opentab('https://www.linkedin.com/in/adem-dardour/')"
+            flat
+            round
+            ><q-tooltip class="bg-indigo" :offset="[5, 5]">
+              LinkedIn
+            </q-tooltip></q-btn
+          >
+
+          <q-btn
+            color="black"
+            icon="eva-github"
+            @click="opentab('https://github.com/floki1250')"
+            flat
+            round
+            ><q-tooltip class="bg-black" :offset="[5, 5]">
+              Github
+            </q-tooltip></q-btn
+          >
+
+          <q-btn
+            color="red"
+            icon="fab fa-reddit"
+            @click="opentab('https://www.reddit.com/user/AdemDR')"
+            flat
+            round
+            ><q-tooltip class="bg-red" :offset="[5, 5]">
+              Reddit
+            </q-tooltip></q-btn
+          >
+
+          <q-btn
+            color="indigo-9"
+            icon="eva-facebook"
+            @click="opentab('https://www.facebook.com/adam1250/')"
+            flat
+            round
+            ><q-tooltip class="bg-indigo-9" :offset="[5, 5]">
+              Facebook
+            </q-tooltip></q-btn
+          >
+        </div>
+      </div>
     </q-scroll-area>
+    <q-space />
   </q-page>
 </template>
 <script>
+import { useQuasar, Platform } from "quasar";
 export default {
+  data() {
+    return {
+      show: true,
+      AboutStyle: "width: 100fr;height:100vh;min-height:100%; ",
+    };
+  },
+  mounted() {
+    if (Platform.is.desktop) {
+      this.AboutStyle = "width: 100fr;height:100vh;min-height:100%; ";
+    } else {
+      this.AboutStyle = "width: 100fr;height:90vh;min-height:100%; ";
+    }
+  },
   methods: {
     opentab(url) {
       window.open(url);
