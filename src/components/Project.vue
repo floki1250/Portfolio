@@ -47,7 +47,7 @@ export default defineComponent({
   name: "PageIndex",
   data() {
     return {
-      data: null,
+      data: [],
     };
   },
   methods: {
@@ -60,6 +60,7 @@ export default defineComponent({
       .get("")
       .then((response) => {
         this.data = response.data;
+        console.log(this.data);
       })
       .catch((e) => {});
   },

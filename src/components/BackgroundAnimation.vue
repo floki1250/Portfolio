@@ -1,7 +1,15 @@
 <template>
   <div class="area">
     <ul class="circles">
-      <li v-for="i in 10" :key="i"></li>
+      <li v-for="i in 2" :key="i" class="logo">
+        <img
+          src="../assets/transparentBrand.svg"
+          alt=""
+          srcset=""
+          style="width: 100%; height: 100%; opacity: 0.2"
+        />
+      </li>
+      <li v-for="i in 8" :key="i" class="shape"></li>
     </ul>
   </div>
 </template>
@@ -26,13 +34,26 @@ export default defineComponent({
   overflow: hidden;
 }
 
-.circles li {
+.circles .logo {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  /* background: rgba(255, 255, 255, 0.2); */
+  background: transparent;
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles .shape {
   position: absolute;
   display: block;
   list-style: none;
   width: 20px;
   height: 20px;
   background: rgba(255, 255, 255, 0.2);
+
   animation: animate 25s linear infinite;
   bottom: -150px;
 }
